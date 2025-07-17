@@ -1,0 +1,284 @@
+html { scroll-behavior: smooth; }
+body {
+  background: #18181b;
+  color: #f3f4f6;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+}
+nav, .project-card, form, footer {
+  transition: background 0.3s, color 0.3s;
+}
+/* Light theme styles */
+html:not(.dark) body {
+  background: #f3f4f6;
+  color: #18181b;
+}
+html:not(.dark) nav {
+  background: #ffffff;
+  color: #18181b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+html:not(.dark) .brand {
+  color: #2dd4bf !important;
+}
+html:not(.dark) .nav-links a {
+  color: #18181b;
+}
+html:not(.dark) .nav-links a:hover {
+  color: #14b8a6;
+}
+html:not(.dark) .theme-btn, html:not(.dark) .menu-btn {
+  background: #e5e7eb;
+  color: #18181b;
+}
+html:not(.dark) .theme-btn:hover, html:not(.dark) .menu-btn:hover {
+  background: #d1d5db;
+}
+html:not(.dark) #mobile-menu {
+  background: #ffffff;
+  color: #18181b;
+}
+html:not(.dark) #mobile-menu a {
+  color: #18181b;
+}
+html:not(.dark) #mobile-menu a:hover {
+  color: #14b8a6;
+}
+html:not(.dark) .projects-grid .project-card {
+  background: #ffffff;
+  color: #18181b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+html:not(.dark) .project-card:hover {
+  box-shadow: 0 8px 24px rgba(45,212,191,0.25), 0 2px 8px rgba(0,0,0,0.10);
+  background: rgba(45,212,191,0.08);
+  border: 1.5px solid #2dd4bf;
+  transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+}
+html:not(.dark) form {
+  background: #ffffff;
+  color: #18181b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+html:not(.dark) form label {
+  color: #52525b;
+}
+html:not(.dark) form input, html:not(.dark) form textarea {
+  background: #e5e7eb;
+  color: #18181b;
+}
+html:not(.dark) form input:focus, html:not(.dark) form textarea:focus {
+  outline: 2px solid #14b8a6;
+}
+html:not(.dark) form button {
+  background: #14b8a6;
+  color: #ffffff;
+}
+html:not(.dark) form button:hover {
+  background: #5eead4;
+  color: #18181b;
+}
+html:not(.dark) footer {
+  background: #f3f4f6;
+  color: #71717a;
+}
+html:not(.dark) h1, html:not(.dark) h2 {
+  color: #14b8a6;
+}
+html:not(.dark) h3 {
+  color: #18181b;
+}
+html:not(.dark) p, html:not(.dark) li {
+  color: #22292f;
+}
+html:not(.dark) .exp-item span {
+  color: #52525b;
+}
+html:not(.dark) .exp-item ul {
+  color: #444950;
+}
+/* Dark theme styles (existing) */
+.dark body { background: #18181b; color: #f3f4f6; }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #27272a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.brand {
+  color: #2dd4bf !important;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+html:not(.dark) .brand {
+  color: #2dd4bf !important;
+}
+.dark .brand {
+  color: #2dd4bf !important;
+}
+nav .nav-links {
+  display: none;
+}
+nav .nav-links a {
+  margin-left: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+nav .nav-links a:hover {
+  color: #2dd4bf;
+}
+nav .theme-btn, nav .menu-btn {
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #3f3f46;
+  color: #f3f4f6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+nav .theme-btn:hover, nav .menu-btn:hover {
+  background: #52525b;
+}
+#mobile-menu {
+  display: none;
+  background: #27272a;
+  padding: 1rem 1.5rem;
+}
+#mobile-menu a {
+  display: block;
+  padding: 0.5rem 0;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#mobile-menu a:hover {
+  color: #2dd4bf;
+}
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+section {
+  margin-bottom: 6rem;
+}
+h1, h2 {
+  color: #2dd4bf;
+  margin-bottom: 1rem;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #f3f4f6; }
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+.project-card {
+  background: #23232a;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(45,212,191,0.15);
+}
+.exp-list {
+  margin-top: 1rem;
+}
+.exp-item {
+  margin-bottom: 2rem;
+}
+.exp-item h3 {
+  margin-bottom: 0.2rem;
+}
+.exp-item span {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+}
+.exp-item ul {
+  margin: 0.5rem 0 0 1.2rem;
+  color: #d4d4d8;
+}
+form {
+  background: #23232a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #d4d4d8;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background: #3f3f46;
+  color: #f3f4f6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+form input:focus, form textarea:focus {
+  outline: 2px solid #2dd4bf;
+}
+form button {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 6px;
+  background: #2dd4bf;
+  color: #18181b;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button:hover {
+  background: #5eead4;
+}
+footer {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  color: #71717a;
+  background: #18181b;
+}
+.social-links a svg {
+  color: #575e62;
+  fill: #575e62;
+  transition: color 0.2s, fill 0.2s;
+}
+.social-links a:hover svg {
+  color: #2dd4bf;
+  fill: #2dd4bf;
+}
+@media (min-width: 768px) {
+  nav .nav-links { display: inline; }
+  nav .menu-btn { display: none; }
+  #mobile-menu { display: none !important; }
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 767px) {
+  nav .nav-links { display: none; }
+  nav .menu-btn { display: inline; }
+  #mobile-menu.show { display: block; }
+}
+/* About section responsive style */
+@media (max-width: 700px) {
+  .about-flex { flex-direction: column !important; gap: 1.5rem !important; align-items: center !important; }
+  .about-flex img { width: 140px !important; height: 140px !important; }
+  .about-flex p { max-width: 100% !important; text-align: center !important; }
+} 
